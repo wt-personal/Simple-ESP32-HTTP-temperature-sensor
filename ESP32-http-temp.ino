@@ -71,7 +71,7 @@ void loop() {
     client.println("async function updateTemp(){");
     client.println("  let r = await fetch('/temperature');");
     client.println("  let t = await r.text();");
-    client.println("  document.getElementById('temp').innerHTML = 'Lämpötila: ' + t + ' °C';");
+    client.println("  document.getElementById('temp').innerHTML = 'Lämpötila: ' + t + ' C';");
     client.println("}");
     client.println("setInterval(updateTemp, 1000);");  // update every 2 sec
     client.println("updateTemp();");
