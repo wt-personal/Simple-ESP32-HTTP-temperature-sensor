@@ -5,7 +5,7 @@ This esp32 project is a simple web server, that uses wifi and DS18B20-temperatur
 - #include <WiFi.h>
 - #include <DS18B20.h>
 
-You cam rename your SSID credentials accordingly in the arduino sketch: ESP32-http-temp.ino 
+You can rename your SSID credentials accordingly in the arduino sketch: ESP32-http-temp.ino 
 
 The esp32 connects to wifi and shares it's local ip address through serial port.
 
