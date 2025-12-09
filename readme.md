@@ -1,4 +1,4 @@
-<img src="image.png" alt="whoops" width="200">
+<img src="image.png" alt="whoops" width="400">
 
 # ESP32 simple http and temp sensor
 
