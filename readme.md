@@ -22,6 +22,8 @@ Includes python script that converts html inside the  client.println() functions
 
 Sketch uses DS18B20 on GPIO4-pin, but that can be changed in the sketch code.
 
+Resistor used for the sensor is 4,7K Ohms
+
 <img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/06/ds18b20_esp32_single_normal.png?w=750&quality=100&strip=all&ssl=1" alt="lol" width="400">
 
 Connections picture above and info how to connect the sensor is from this site:
