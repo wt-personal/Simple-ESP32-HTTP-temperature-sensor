@@ -1,3 +1,5 @@
+<img src="image.png" alt="whoops" width="200">
+
 # ESP32 simple http and temp sensor
 
 This esp32 project is a simple web server, that uses wifi and DS18B20-temperature sensor.
