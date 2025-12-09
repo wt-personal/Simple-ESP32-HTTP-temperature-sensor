@@ -2,8 +2,8 @@
 #include <DS18B20.h>
 
 // WiFi credentials
-const char* ssid = "SSID_NAME";
-const char* password = "SSID_PASSWORD";
+const char* ssid = SSID;
+const char* password = WIFI_PASSWORD;
 
 WiFiServer server(80);
 
@@ -35,12 +35,6 @@ void loop() {
   // --- Serve root page ---
   if (req.indexOf("GET / ") >= 0) {
     client.println("HTTP/1.1 200 OK");
-    printf("moi"
-            "helou"
-    
-    
-    
-            "");
     client.println("Content-type:text/html");
     client.println("Connection: close");
     client.println();
@@ -63,19 +57,22 @@ void loop() {
     client.println("img {display: block;margin-left: auto;margin-right: auto;}</style>");
     // BODY
     client.println("<body>");
-    client.println("<h1>Simple ESP32 HTTP temp sensor</h1>");
-    client.println("<img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuLwiw639qm7nBKMdFb5lVk81ks9ocVOInjQ&s\">");
+    client.println("<h1>ESP32 ds18b20 temp sensor</h1>");
+    client.println("<img src=\"https://www.shutterstock.com/image-vector/hot-cold-temperature-thermometers-vector-260nw-2535145419.jpg\">");
 
 
+    client.println("<h2 id='temp'>Loading...</h2>");
+    
     client.println("<script>");
     client.println("async function updateTemp(){");
     client.println("  let r = await fetch('/temperature');");
     client.println("  let t = await r.text();");
-    client.println("  document.getElementById('temp').innerHTML = 'Lämpötila: ' + t + ' C';");
+    client.println("  document.getElementById('temp').innerHTML = 'Temp: ' + t + ' °C';");
     client.println("}");
     client.println("setInterval(updateTemp, 1000);");  // update every 2 sec
     client.println("updateTemp();");
     client.println("</script>");
+    
     client.println("</body></html>");
   }
 
