@@ -69,7 +69,7 @@ void loop() {
     client.println("  let t = await r.text();");
     client.println("  document.getElementById('temp').innerHTML = 'Temp: ' + t + ' °C';");
     client.println("}");
-    client.println("setInterval(updateTemp, 1000);");  // update every 2 sec
+    client.println("setInterval(updateTemp, 1000);");  // update in ms
     client.println("updateTemp();");
     client.println("</script>");
     
